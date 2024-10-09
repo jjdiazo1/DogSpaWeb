@@ -9,8 +9,6 @@ Se desarrollo en conjunto con el equipo Pawsitivity:
 - Santiago Gómez: `@Santigogo`
 - Daniela Echavarria: `@DanielaE1512`
 
-## Créditos
-
 Este proyecto fue desarrollado con la colaboración de los siguientes profesores y colaboradores, quienes contribuyeron a la creación de la estructura del proyecto, la documentación y la wiki:
 
 - **[@VivianGomez](https://github.com/VivianGomez)**
