@@ -9,7 +9,15 @@ Se desarrollo en conjunto con el equipo Pawsitivity:
 - Santiago Gómez: `@Santigogo`
 - Daniela Echavarria: `@DanielaE1512`
 
-Acompañado del curso dictado por la profesora Vivian Gómez Cubillos `@VivianGomez`
+## Créditos
+
+Este proyecto fue desarrollado con la colaboración de los siguientes profesores y colaboradores, quienes contribuyeron a la creación de la estructura del proyecto, la documentación y la wiki:
+
+- **[@VivianGomez](https://github.com/VivianGomez)**
+
+- **[@josejbocanegra](https://github.com/josejbocanegra)**
+
+- **[@fai-aher](https://github.com/fai-aher)**
 
 ## Requisitos
 
