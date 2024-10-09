@@ -37,6 +37,7 @@ Para ejecutar el proyecto completo, necesitas tener instalados los siguientes pr
 - **Frontend**: Ubicado en el directorio `ISIS2603_202410_S5_E3_DogSpa_Front/`, desarrollado con Angular.
 
 # Instrucciones para ejecutar
+Lastimosamente al ser 2 repositorios separados recuperados del backup del repositorio del curso se tienen que tratar diferente el backend y el front end, basicamente abrirlos separados como si fueran dos proyectos. 
 
 ## Instrucciones para Ejecutar el Backend
 
