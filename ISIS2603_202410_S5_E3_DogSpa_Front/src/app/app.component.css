@@ -1,0 +1,49 @@
+/* Styles for Main Component */
+.HeaderSedes, .HeaderServicios, .HeaderArticulos, .HeaderPaquetes {
+    background: #d24536;
+    color: #efcfd3;
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px;
+  }
+  
+  .Sedes, .Servicios, .Articulos, .Paquetes{
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  .PWsitivity {
+    background: #d24536;
+    color: #efcfd3;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+
+   /* Cambiar color de fondo y color del texto seleccionado */
+::selection {
+    background-color: #efcfd3; /* Color de fondo del texto seleccionado */
+    color: #000000; /* Color del texto seleccionado */
+  }
+  
+  /* Cambiar color de fondo y color del texto seleccionado para navegadores WebKit (Chrome, Safari) */
+  ::-webkit-selection {
+    background-color: #efcfd3; /* Color de fondo del texto seleccionado */
+    color: #000000; /* Color del texto seleccionado */
+  }
+  
+  /* Cambiar color de fondo y color del texto seleccionado para navegadores Mozilla (Firefox) */
+  ::-moz-selection {
+    background-color: #efcfd3; /* Color de fondo del texto seleccionado */
+    color: #000000; /* Color del texto seleccionado */
+  }

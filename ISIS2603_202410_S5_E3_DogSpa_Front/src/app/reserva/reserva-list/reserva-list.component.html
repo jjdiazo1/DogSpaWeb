@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-center mb-4">
+  <h1>Reservas de Mascotas</h1>
+</div>
+
+<div *ngIf="selected">
+  <app-reserva-detail [reservaDetail]="selectedReserva"></app-reserva-detail>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 mx-auto">
+      <table class="table table-hover">
+        <thead class="table-danger">
+          <tr>
+            <th scope="col">Nombre de Mascota</th>
+            <th scope="col">Dueño de Mascota</th>
+            <th scope="col">Trabajador Encargado</th>
+            <th scope="col">Tipo de Mascota</th>
+            <th scope="col">Raza de Mascota</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let reserva of reservas">
+          <td (click)="onSelected(reserva)">{{ reserva.nombreMascota }}</td>
+          <td (click)="onSelected(reserva)">{{ reserva.duenoMascota }}</td>
+          <td (click)="onSelected(reserva)">
+            {{ reserva.trabajadorEncargado }}
+          </td>
+          <td (click)="onSelected(reserva)">{{ reserva.tipoMascota }}</td>
+          <td (click)="onSelected(reserva)">{{ reserva.razaMascota }}</td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

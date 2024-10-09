@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "efbe8773-d43f-4851-8086-096fba161945",
+		"name": "PaqueteReserva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33299702",
+		"_collection_link": "https://crimson-equinox-826896.postman.co/workspace/Team-Workspace~09fe79e4-34b1-45c3-84b7-135228b00c24/collection/33299702-efbe8773-d43f-4851-8086-096fba161945?action=share&source=collection_link&creator=33299702"
+	},
+	"item": [
+		{
+			"name": "Crear Sede",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()",
+							"pm.globals.set(\"sede_id_1\", data.id);",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"   pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"nombre\": \"Sede 1\",\r\n   \"direccion\" : \"Cra 69D 24 a 98\",\r\n   \"telefono\": 1234553456,\r\n   \"instagram\":\"@dogspasede1\",\r\n   \"ciudad\": \"Bogota\"\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sedes",
+					"host": ["{{baseUrl}}"],
+					"path": ["sedes"]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Sede",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Sede1\",\n    \"direccion\": \"Cra 69D n24 a 81\",\n    \"telefono\": \"12345678\",\n    \"instagram\": \"DOGSPABOG\",\n    \"ciudad\": \"Bogota\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/sedes",
+							"host": ["{{baseUrl}}"],
+							"path": ["sedes"]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"nombre\": \"Sede1\",\n    \"direccion\": \"Cra 69D n24 a 81\",\n    \"telefono\": \"12345678\",\n    \"instagram\": \"DOGSPABOG\",\n    \"ciudad\": \"Bogota\"\n\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()\r",
+							"pm.globals.set(\"paquete_id_1\", data.id);\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"   pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Spa completo\",\r\n    \"precio\": 500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/paquetes",
+					"host": ["{{baseUrl}}"],
+					"path": ["paquetes"]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear un Paquete",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/paquetes",
+							"host": ["{{baseUrl}}"],
+							"path": ["paquetes"]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Spa completo\",\r\n    \"precio\": 500000\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear una reserva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()\r",
+							"pm.globals.set(\"reserva_id_1\", data.id);\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"   pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreMascota\": \"Flofy\",\r\n    \"duenoMascota\": \"Antonio\",\r\n    \"telefono\": 123456789,\r\n    \"fecha\": \"2025-03-01T16:46:41.639483\",\r\n    \"trabajadorEncargado\": \"Wallace\",\r\n    \"tipoMascota\": \"Canino\",\r\n    \"razaMascota\": \"Sabueso Polaco\",\r\n    \"edadMascota\": 10,\r\n    \"sede\": {\r\n        \"id\": {{sede_id_1}},\r\n        \"nombre\": \"Sede1\",\r\n        \"direccion\": \"Una direccion\",\r\n        \"telefono\": 123456,\r\n        \"instagram\": \"Una direccion de instagram\",\r\n        \"ciudad\": \"Bogota\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/reservas",
+					"host": ["{{baseUrl}}"],
+					"path": ["reservas"]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear una reserva",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reservas",
+							"host": ["{{baseUrl}}"],
+							"path": ["reservas"]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"nombreMascota\": \"Flofy\",\r\n    \"duenoMascota\": \"Antonio\",\r\n    \"telefono\": 123456789,\r\n    \"fecha\": \"2025-03-01T16:46:41.639483\",\r\n    \"trabajadorEncargado\": \"Wallace\",\r\n    \"tipoMascota\": \"Canino\",\r\n    \"razaMascota\": \"Sabueso Polaco\",\r\n    \"edadMascota\": 10,\r\n    \"sede\": {\r\n        \"id\": {{sede_id_1}},\r\n        \"nombre\": \"Sede1\",\r\n        \"direccion\": \"Una direccion\",\r\n        \"telefono\": 123456,\r\n        \"instagram\": \"Una direccion de instagram\",\r\n        \"ciudad\": \"Bogota\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear una reserva 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json()\r",
+							"pm.globals.set(\"reserva_id_2\", data.id);\r",
+							"\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"   pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreMascota\": \"Flofy\",\r\n    \"duenoMascota\": \"Antonio\",\r\n    \"telefono\": 123456789,\r\n    \"fecha\": \"2025-03-01T16:46:41.639483\",\r\n    \"trabajadorEncargado\": \"Wallace\",\r\n    \"tipoMascota\": \"Canino\",\r\n    \"razaMascota\": \"Sabueso Polaco\",\r\n    \"edadMascota\": 10,\r\n    \"sede\": {\r\n        \"id\": {{sede_id_1}},\r\n        \"nombre\": \"Sede1\",\r\n        \"direccion\": \"Una direccion\",\r\n        \"telefono\": 123456,\r\n        \"instagram\": \"Una direccion de instagram\",\r\n        \"ciudad\": \"Bogota\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/reservas",
+					"host": ["{{baseUrl}}"],
+					"path": ["reservas"]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear una reserva",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reservas",
+							"host": ["{{baseUrl}}"],
+							"path": ["reservas"]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"nombreMascota\": \"Flofy\",\r\n    \"duenoMascota\": \"Antonio\",\r\n    \"telefono\": 123456789,\r\n    \"fecha\": \"2025-03-01T16:46:41.639483\",\r\n    \"trabajadorEncargado\": \"Wallace\",\r\n    \"tipoMascota\": \"Canino\",\r\n    \"razaMascota\": \"Sabueso Polaco\",\r\n    \"edadMascota\": 10,\r\n    \"sede\": {\r\n        \"id\": {{sede_id_1}},\r\n        \"nombre\": \"Sede1\",\r\n        \"direccion\": \"Una direccion\",\r\n        \"telefono\": 123456,\r\n        \"instagram\": \"Una direccion de instagram\",\r\n        \"ciudad\": \"Bogota\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear un servicio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json();",
+							"pm.globals.set(\"servicio_id_1\", data.id); // Guarda el id del servicio para usarlo en pruebas subsecuentes",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"   pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"precio\": 20000.500,\n    \"nombre\": \"Lavado rapido\",\n    \"descripcion\": \"Baño rapido, no incluye secado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/servicios",
+					"host": ["{{baseUrl}}"],
+					"path": ["servicios"]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear un servicio",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/servicios",
+							"host": ["{{baseUrl}}"],
+							"path": ["servicios"]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"precio\": 20000.500,\n    \"nombre\": \"Lavado rapido\",\n    \"descripcion\": \"Baño rapido, no incluye secado\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Agregar una Reserva a un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_1}}",
+					"host": ["{{baseUrl}}"],
+					"path": [
+						"paquetes",
+						"{{paquete_id_1}}",
+						"reservas",
+						"{{reserva_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Agregar una Reserva a un Paquete",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_1}}",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"{{reserva_id_1}}"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"nombreMascota\": \"Bobby\",\r\n    \"duenoMascota\": \"El Pepe\",\r\n    \"telefono\": 12345,\r\n    \"fecha\": \"14-01-2017 11:42:32\",\r\n    \"trabajador encargado\": \"Jesús de Nazaret\",\r\n    \"tipoMascota\": \"Perro\",\r\n    \"razaMascota\": \"Beagle\",\r\n    \"edadMascota\": 1,\r\n    \"sede\": [],\r\n    \"servicios\": [],\r\n    \"paquetes\": [\r\n        {\r\n        \"id\": 1,\r\n        \"nombre\": \"Spa completo\",\r\n        \"precio\": 500000\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Agregar un paquete a una reserva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/reservas/{{reserva_id_1}}/paquetes/{{paquete_id_1}}",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": [
+						"api",
+						"reservas",
+						"{{reserva_id_1}}",
+						"paquetes",
+						"{{paquete_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Agregar un paquete a una reserva",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombreMascota\": \"Flofy\",\r\n    \"duenoMascota\": \"Antonio\",\r\n    \"telefono\": 123456789,\r\n    \"fecha\": \"2025-03-01T16:46:41.639483\",\r\n    \"trabajadorEncargado\": \"Wallace Antonio\",\r\n    \"tipoMascota\": \"Canino\",\r\n    \"razaMascota\": \"Sabueso Polaco\",\r\n    \"edadMascota\": 10,\r\n    \"servicios\": [],\r\n    \"paquetes\": [\r\n\t    {\r\n            \"id\": 1,\r\n            \"nombre\": \"Spa completo\",\r\n            \"precio\": 500000\r\n        }\t\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/reservas/{{reserva_id_1}}/paquetes/{{paquete_id_1}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": [
+								"api",
+								"reservas",
+								"{{reserva_id_1}}",
+								"paquetes",
+								"{{paquete_id_1}}"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Spa completo\",\r\n    \"precio\": 500000,\r\n    \"servicios\": [],\r\n    \"reservas\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombreMascota\": \"Flofy\",\r\n            \"duenoMascota\": \"Antonio\",\r\n            \"telefono\": 123456789,\r\n            \"fecha\": \"2025-03-01T16:46:41.639483\",\r\n            \"trabajadorEncargado\": \"Wallace Antonio\",\r\n            \"tipoMascota\": \"Canino\",\r\n            \"razaMascota\": \"Sabueso Polaco\",\r\n            \"edadMascota\": 10\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Agregar una Reserva que no existe a un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"   pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get expected error message\", function () {\r",
+							"   var data = pm.response.json();\r",
+							"   pm.expect(data.apierror.message).to.eql(\"La reserva con el Id dado no fue encontrada\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/0",
+					"host": ["{{baseUrl}}"],
+					"path": ["paquetes", "{{paquete_id_1}}", "reservas", "0"]
+				}
+			},
+			"response": [
+				{
+					"name": "Agregar una Reserva que no existe a un Paquete",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/0",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"0"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"apierror\": {\r\n        \"status\": \"NOT_FOUND\",\r\n        \"timestamp\": \"21-02-2023 10:15:29\",\r\n        \"message\": \"La reserva con el Id dado no fue encontrada\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener una Reserva de un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_1}}",
+					"host": ["{{baseUrl}}"],
+					"path": [
+						"paquetes",
+						"{{paquete_id_1}}",
+						"reservas",
+						"{{reserva_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener una Reserva de un Paquete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_1}}",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"{{reserva_id_1}}"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"id\": 1,\r\n    \"nombreMascota\": \"Bobby\",\r\n    \"duenoMascota\": \"El Pepe\",\r\n    \"telefono\": 12345,\r\n    \"fecha\": \"14-01-2017 11:42:32\",\r\n    \"trabajador encargado\": \"Jesús de Nazaret\",\r\n    \"tipoMascota\": \"Perro\",\r\n    \"razaMascota\": \"Beagle\",\r\n    \"edadMascota\": 1,\r\n    \"sede\": [],\r\n    \"servicios\": [],\r\n    \"paquetes\": [\r\n        {\r\n        \"id\": 1,\r\n        \"nombre\": \"Spa completo\",\r\n        \"precio\": 500000\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener una Reserva que no existe de un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"   pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get expected error message\", function () {\r",
+							"   var data = pm.response.json();\r",
+							"   pm.expect(data.apierror.message).to.eql(\"La reserva no fue encontrada\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/0",
+					"host": ["{{baseUrl}}"],
+					"path": ["paquetes", "{{paquete_id_1}}", "reservas", "0"]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener una Reserva que no existe de un Paquete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/0",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"0"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"apierror\": {\r\n        \"status\": \"NOT_FOUND\",\r\n        \"timestamp\": \"21-02-2023 10:17:39\",\r\n        \"message\": \"La reserva no fue encontrada\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener una Reserva que no esta asociada al Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 412\", function () {\r",
+							"   pm.response.to.have.status(412);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get expected error message\", function () {\r",
+							"   var data = pm.response.json();\r",
+							"   pm.expect(data.apierror.message).to.eql(\"La reserva no está asociada con el paquete\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_2}}",
+					"host": ["{{baseUrl}}"],
+					"path": [
+						"paquetes",
+						"{{paquete_id_1}}",
+						"reservas",
+						"{{reserva_id_2}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener una Reserva que no esta asociada al Paquete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_2}}",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"{{reserva_id_2}}"
+							]
+						}
+					},
+					"status": "Precondition Failed",
+					"code": 412,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"apierror\": {\r\n        \"status\": \"PRECONDITION_FAILED\",\r\n        \"timestamp\": \"21-02-2023 10:19:03\",\r\n        \"message\": \"La reserva no está asociada con el paquete\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener Reservas de un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Number of reservas     > ' + 0, function () {\r",
+							"   var data = pm.response.json()\r",
+							"   pm.expect(data.length).to.greaterThan(0)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"   pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas",
+					"host": ["{{baseUrl}}"],
+					"path": ["paquetes", "{{paquete_id_1}}", "reservas"]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener Reservas de un Paquete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas",
+							"host": ["{{baseUrl}}"],
+							"path": ["paquetes", "{{paquete_id_1}}", "reservas"]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "[\r\n    {\r\n    \"id\": 1,\r\n    \"nombreMascota\": \"Bobby\",\r\n    \"duenoMascota\": \"El Pepe\",\r\n    \"telefono\": 12345,\r\n    \"fecha\": \"14-01-2017 11:42:32\",\r\n    \"trabajador encargado\": \"Jesús de Nazaret\",\r\n    \"tipoMascota\": \"Perro\",\r\n    \"razaMascota\": \"Beagle\",\r\n    \"edadMascota\": 1,\r\n    \"sede\": [],\r\n    \"servicios\": [],\r\n    \"paquetes\": [\r\n        {\r\n        \"id\": 1,\r\n        \"nombre\": \"Spa completo\",\r\n        \"precio\": 500000\r\n        }\r\n    ]\r\n    }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "Borrar una Reserva de un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"   pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_1}}",
+					"host": ["{{baseUrl}}"],
+					"path": [
+						"paquetes",
+						"{{paquete_id_1}}",
+						"reservas",
+						"{{reserva_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Borrar una Reserva de un Paquete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/{{reserva_id_2}}",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"{{reserva_id_2}}"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Borrar una Reserva a un Paquete que no existe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"   pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get expected error message\", function () {\r",
+							"   var data = pm.response.json();\r",
+							"   pm.expect(data.apierror.message).to.eql(\"El paquete con el Id dado no fue encontrado\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/0/reservas/{{reserva_id_1}}",
+					"host": ["{{baseUrl}}"],
+					"path": ["paquetes", "0", "reservas", "{{reserva_id_1}}"]
+				}
+			},
+			"response": [
+				{
+					"name": "Borrar una Reserva a un Paquete que no existe",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/0/reservas/{{reserva_id_1}}",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"0",
+								"reservas",
+								"{{reserva_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"apierror\": {\r\n        \"status\": \"NOT_FOUND\",\r\n        \"timestamp\": \"21-02-2023 10:25:21\",\r\n        \"message\": \"La reserva con el ID dado no fue encontrada\"\r\n    }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Borrar una Reserva que no existe de un Paquete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"   pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get expected error message\", function () {\r",
+							"   var data = pm.response.json();\r",
+							"   pm.expect(data.apierror.message).to.eql(\"La reserva con el Id dado no fue encontrada\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/0",
+					"host": ["{{baseUrl}}"],
+					"path": ["paquetes", "{{paquete_id_1}}", "reservas", "0"]
+				}
+			},
+			"response": [
+				{
+					"name": "Borrar una Reserva que no existe de un Paquete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/paquetes/{{paquete_id_1}}/reservas/0",
+							"host": ["{{baseUrl}}"],
+							"path": [
+								"paquetes",
+								"{{paquete_id_1}}",
+								"reservas",
+								"0"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"apierror\": {\r\n        \"status\": \"NOT_FOUND\",\r\n        \"timestamp\": \"21-02-2023 10:25:21\",\r\n        \"message\": \"La reserva con el ID dado no fue encontrada\"\r\n    }\r\n}"
+				}
+			]
+		}
+	]
+}

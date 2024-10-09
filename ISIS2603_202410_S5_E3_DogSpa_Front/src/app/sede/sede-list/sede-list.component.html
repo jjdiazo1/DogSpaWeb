@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sedes de Spa para Perros</title>
+
+</head>
+<body>
+  <div class="page-container">
+    <h1 class="main-title">Sedes Pawsitivity</h1>
+    
+    <div class="filters-container">
+   
+       <!-- Filtro 1 -->
+       <div class="filter-container" style="background-color: #ADD8E6; padding: 7px; border-radius: 8px;">
+        <p>¡Encuentra la sede más cercana a ti!</p>
+        <div class="search">
+          <input type="text" placeholder="Buscar por letra (ciudad)" [(ngModel)]="searchTerm" (input)="searchSedes()">
+          <button class="btn-custom" (click)="sortSedesByCity()">Ordenar A-Z por Ciudad</button>
+        </div>
+      </div>
+       <!-- Filtro 2 -->
+<div class="filter-container" style="background-color: #ADD8E6; padding: 7px; border-radius: 8px;">
+  <p>¡Filtra y obtén la información de tu sede más cercana!</p>
+  <div class="search">
+    <select [(ngModel)]="searchTerm" (change)="filtrarPorCiudad()">
+      <option value="">Seleccionar ciudad</option>
+      <option *ngFor="let sede of sedes">{{ sede.ciudad }}</option>
+    </select>
+  </div>
+</div>
+
+  
+
+      <!-- Filtro 3 -->
+      <div class="filter-container" style="background-color: #ADD8E6; padding: 8px; border-radius: 8px;">
+        <p>Filtrar por sede</p>
+        <select id="sedeFilter" [(ngModel)]="selectedName" (change)="searchSedes()">
+          <option value="">Seleccionar nombre de sede</option>
+          <option *ngFor="let sede of sedes" [value]="sede.nombre">{{ sede.nombre }}</option>
+        </select>
+      </div>
+    </div>
+
+  
+    <div class="content-below-filters">
+      <div *ngIf="selected">
+        <app-sede-detail [sedeDetail]="selectedSede"></app-sede-detail>
+        <button class="btn btn-primary mt-3" (click)="Atras()">✖</button>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col mb-2" *ngFor="let sede of filteredSedes">
+            <div class="card p-2 custom-card" style="width: 15rem; height: 33rem">
+              <img class="card-img-top" src="assets/images/sede.png" alt="{{ sede.nombre }}" (click)="onSelected(sede)" />
+              <div class="card-body">
+                <h5 class="card-title custom-title">{{ sede.nombre }}</h5>
+                <p class="card-text">{{ sede.ciudad }}</p>
+                <button class="btn-custom" (click)="onSelected(sede)">Más Información</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

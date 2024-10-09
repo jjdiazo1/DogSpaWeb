@@ -1,0 +1,13 @@
+<div class="card mx-auto mb-4" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ reservaDetail.nombreMascota }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">
+      Edad: {{ reservaDetail.edadMascota }}
+      {{ reservaDetail.edadMascota === 1 ? "mes" : "meses" }}
+    </h6>
+    <p class="card-text">Alguna observación sobre la hermosa mascota</p>
+    <a href="#" class="card-link"
+      >Llamar al dueño: {{ reservaDetail.telefono }}</a
+    >
+  </div>
+</div>

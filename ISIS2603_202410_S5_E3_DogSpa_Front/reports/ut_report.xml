@@ -1,0 +1,81 @@
+<testExecutions version="1">
+  <file path="src/app/articulo/articulo-list/articulo-list.component.spec.ts">
+    <testCase name="ArticuloListComponent should have 9 &lt;div.col.mb-2> elements and the deleted articulo should not exist" duration="71"/>
+    <testCase name="ArticuloListComponent should have 10 &lt;img> elements" duration="8"/>
+    <testCase name="ArticuloListComponent should have 10 &lt;div.col.mb-2> elements" duration="6"/>
+    <testCase name="ArticuloListComponent should have 10 &lt;div.card-body> elements" duration="6"/>
+    <testCase name="ArticuloListComponent should have the corresponding src to the articulo image and alt to the articulo name" duration="9"/>
+    <testCase name="ArticuloListComponent should create" duration="4"/>
+    <testCase name="ArticuloListComponent should have h5 tag with the articulo.nombre" duration="5"/>
+    <testCase name="ArticuloListComponent should have 10 &lt;card.p-2> elements" duration="6"/>
+  </file>
+  <file path="src/app/sede/sede-list/sede-list.component.spec.ts">
+    <testCase name="SedeListComponent should create" duration="14">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[SedeService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'SedeService', 'HttpClient', 'HttpClient' ] })
+    at NullInjector.get (node_modules/@angular/core/fesm2022/core.mjs:1654:27)
+    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:3093:33)
+    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:3093:33)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2022/core.mjs:1100:40)
+    at ɵɵinject (node_modules/@angular/core/fesm2022/core.mjs:1106:60)
+    at Object.factory (ng:///SedeService/ɵfac.js:4:39)
+    at callback (node_modules/@angular/core/fesm2022/core.mjs:3219:47)
+    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/core.mjs:866:9)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/core.mjs:3218:21)
+    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:3082:33)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/articulo/articulo-detail/articulo-detail.component.spec.ts">
+    <testCase name="ArticuloDetailComponent should create" duration="17"/>
+    <testCase name="ArticuloDetailComponent should have a p.h3.p-3 element with bookDetail.name" duration="3"/>
+  </file>
+  <file path="src/app/paqueteServicio/paqueteServicio-list/paqueteServicio-list.component.spec.ts">
+    <testCase name="PaqueteServicioListComponent should create" duration="10"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="5"/>
+    <testCase name="AppComponent should have as title 'newAngularApp'" duration="2"/>
+  </file>
+  <file path="src/app/articulo/articulo.service.spec.ts">
+    <testCase name="Service: Articulo should ..." duration="1"/>
+  </file>
+  <file path="src/app/paqueteServicio/paqueteServicio.service.spec.ts">
+    <testCase name="Service: PaqueteServicio should ..." duration="2"/>
+  </file>
+  <file path="src/app/sede/sede.service.spec.ts">
+    <testCase name="Service: Sede should ..." duration="3">
+      <failure message="Error">NullInjectorError: R3InjectorError(DynamicTestModule)[SedeService -&gt; HttpClient -&gt; HttpClient]: 
+  NullInjectorError: No provider for HttpClient!
+error properties: Object({ ngTempTokenPath: null, ngTokenPath: [ 'SedeService', 'HttpClient', 'HttpClient' ] })
+    at NullInjector.get (node_modules/@angular/core/fesm2022/core.mjs:1654:27)
+    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:3093:33)
+    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:3093:33)
+    at injectInjectorOnly (node_modules/@angular/core/fesm2022/core.mjs:1100:40)
+    at ɵɵinject (node_modules/@angular/core/fesm2022/core.mjs:1106:60)
+    at Object.factory (ng:///SedeService/ɵfac.js:4:39)
+    at callback (node_modules/@angular/core/fesm2022/core.mjs:3219:47)
+    at runInInjectorProfilerContext (node_modules/@angular/core/fesm2022/core.mjs:866:9)
+    at R3Injector.hydrate (node_modules/@angular/core/fesm2022/core.mjs:3218:21)
+    at R3Injector.get (node_modules/@angular/core/fesm2022/core.mjs:3082:33)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/paqueteServicio/paqueteServicio.service.spec.ts">
+    <testCase name="Service: PaqueteServicio should ..." duration="2"/>
+  </file>
+  <file path="src/app/articulo/articulo.service.spec.ts">
+    <testCase name="Service: Articulo should ..." duration="3"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should have as title 'newAngularApp'" duration="2"/>
+    <testCase name="AppComponent should have as title 'newAngularApp'" duration="47"/>
+    <testCase name="AppComponent should create the app" duration="4"/>
+  </file>
+  <file path="src/app/articulo/articulo-list/articulo-list.component.spec.ts">
+    <testCase name="ArticuloListComponent should create" duration="6"/>
+
+  </file>
+</testExecutions>

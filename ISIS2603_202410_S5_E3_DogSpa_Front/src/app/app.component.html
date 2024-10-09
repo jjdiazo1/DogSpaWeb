@@ -1,0 +1,53 @@
+<!-- Fonts -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+</style>
+
+<!-- Navbar -->
+<div class="row justify-content-center">
+    <div class="col-4 text-center">
+      <div class="PWsitivity"> 
+        <a routerLink="/" class="nav-link">PAWSITIVITY</a>
+    </div>
+    </div>
+  
+    <div class="col-2 text-center">
+      <div class="HeaderSedes">
+        <div class="Rectangle4"></div>
+        <div class="Sedes">
+          <a routerLink="/sedes/list" class="nav-link">SEDES</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 text-center">
+      <div class="HeaderServicios">
+        <div class="Rectangle5"></div>
+        <div class="Servicios">
+          <a routerLink="/servicios/list" class="nav-link">SERVICIOS</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 text-center">
+      <div class="HeaderArticulos">
+        <div class="Rectangle5"></div>
+        <div class="Articulos">
+          <a routerLink="/articulos/list" class="nav-link">ARTÍCULOS</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 text-center">
+      <div class="HeaderPaquetes">
+        <div class="Rectangle5"></div>
+        <div class="Paquetes">
+          <a routerLink="/paquetes/list" class="nav-link">PAQUETES</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="container-fluid" id="principal">
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

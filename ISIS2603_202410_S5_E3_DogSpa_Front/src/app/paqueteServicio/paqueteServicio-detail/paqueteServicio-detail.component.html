@@ -1,0 +1,30 @@
+
+
+<div class="container-fluid">
+  <div class="square-container">
+    <p class="titleGrande">{{ paqueteServicioDetail.nombre }}</p>
+    <div class="row">
+      <div class="col-6">
+        <div class="thumb text-center">
+          <img class="img-fluid" src="../../../assets/images/paqueteServicios.png"
+          alt="PaqueteServicio"/>
+        </div>
+      </div>
+      <div class="col-6">
+        <dl>
+          <hr />
+          <dt class="subtitulo">Servicios</dt>
+          <br>
+          <dd class="caption" *ngFor="let servicio of paqueteServicioDetail.servicios">
+            {{ servicio.nombre }}</dd>
+            <hr />
+
+          <dt class="subtitulo">Precio</dt>
+          <br>
+          <dd class="precio">${{ paqueteServicioDetail.precio }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+

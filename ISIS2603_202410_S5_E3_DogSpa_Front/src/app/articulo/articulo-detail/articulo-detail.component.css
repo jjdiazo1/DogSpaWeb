@@ -1,0 +1,18 @@
+.container-fluid {
+    background-color: #ffffff; /* Fondo blanco */
+    margin: 20px; /* Margen exterior */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+
+  /* Aplicar margen a la izquierda */
+  .container-fluid {
+    margin-left: 30px;
+  }
+
+  /* Establecer la fuente personalizada para los títulos */
+  .container-fluid .h3 {
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+  }

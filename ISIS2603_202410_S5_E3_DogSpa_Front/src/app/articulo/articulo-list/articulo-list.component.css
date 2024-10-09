@@ -1,0 +1,178 @@
+.page-container {
+    background-color: #feffff; 
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  .main-title {
+    font-size: 50px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color: #d24536;
+    text-shadow: 10px 10px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .custom-card {
+    background-color: #add8e6; 
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  
+  .custom-title {
+    font-size: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color:rgb(0, 0, 0)
+  }
+  
+  
+  .custom-card:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+  }
+
+  .page-container  {
+    border: 2px solid #ccc; 
+    padding: 20px; 
+    border-radius: 10px; 
+    background-image: url('/assets/images/fondo.png'); 
+    background-size: 300px; 
+    background-position: center; 
+    color: rgb(0, 0, 0); 
+  }
+  @keyframes glitter {
+    0% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(2);
+    }
+    100% {
+      filter: brightness(1);
+    }
+  }
+  
+  .btn-custom {
+    background-color: #d24536; 
+    color: #fff; 
+    font-size: 15px; 
+    font-family: 'Outfit', sans-serif; 
+    font-weight: 900; 
+    line-height: 30.32px; 
+    letter-spacing: 2.88px;
+    animation: glitter 1s infinite;
+  }
+  
+  .btn-custom:hover {
+    background-color: #c13628; 
+    animation: none;
+  }
+
+  .uniform-card {
+    width: 15rem; /* Ancho fijo para todas las tarjetas */
+    height: 33rem; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: justify; /* Justifica el texto */
+    height: 100%;
+    text-align: justify;
+  }
+
+  .card-title, .card-text {
+    width: 100%; /* Asegura que el texto justificado ocupe todo el ancho del contenedor */
+  }
+
+  .card-title {
+    margin-top: 0; /* Elimina el margen superior para un ajuste más preciso */
+  }
+  
+  .card-title{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color:rgb(0, 0, 0);
+    text-align: center}
+
+    .page-container {
+        padding: 20px;
+      }
+      
+      .filter-search-wrapper {
+        background-color: #add8e6;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      
+      .filter-search-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .uniform-select {
+        width: 200px; /* Define un ancho uniforme para los selectores */
+        padding: 5px; /* Añade algo de padding si es necesario */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total del elemento */
+      }
+      
+      .filter {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+      
+      .search {
+        margin-left: auto;
+      }
+      
+      
+      
+      .filter label {
+        margin-bottom: 5px;
+      }
+      
+      .filter select {
+        padding: 5px;
+      }
+      
+      .search input {
+        padding: 5px;
+      }
+      
+      .container-fluid {
+        padding: 0 15px;
+      }
+      
+      .custom-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .btn-custom {
+        margin-top: auto;
+      }
+      

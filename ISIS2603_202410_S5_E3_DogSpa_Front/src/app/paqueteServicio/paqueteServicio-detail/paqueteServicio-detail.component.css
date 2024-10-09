@@ -1,0 +1,83 @@
+.sedeImage {
+    width: 400px;
+    height: 400px; 
+    justify-content: center; 
+    object-fit: contain; 
+    display: block;
+  
+  }
+  
+ 
+.titleGrande{
+    font-size: 70px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color:rgb(0, 0, 0)
+}
+
+.subtitulo{
+    font-size: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color:rgb(0, 0, 0)
+}
+.square-container {
+    border: 2px solid #ccc; 
+    padding: 20px; 
+    border-radius: 10px; 
+
+    background-size: cover; 
+    background-position: center; 
+    color: rgb(10, 8, 8); 
+    backdrop-filter: blur(20px);
+  }
+
+  @keyframes glitter {
+    0% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(2);
+    }
+    100% {
+      filter: brightness(1);
+    }
+  }
+  
+  .btn-custom {
+    background-color: #d24536; 
+    color: #fff; 
+    font-size: 15px; 
+    font-family: 'Outfit', sans-serif; 
+    font-weight: 900; 
+    line-height: 30.32px; 
+    letter-spacing: 2.88px; 
+    animation: glitter 1s infinite; 
+  }
+  
+  .btn-custom:hover {
+    background-color: #c13628; 
+    animation: none; 
+  }
+  .caption {
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color:rgb(0, 0, 0)
+   
+}
+
+.precio {
+    font-size: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+    color: green;
+  }

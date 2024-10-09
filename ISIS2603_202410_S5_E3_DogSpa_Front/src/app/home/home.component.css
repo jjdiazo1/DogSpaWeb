@@ -1,0 +1,282 @@
+/* home.component.css */
+
+body, html {
+    background-color: #efcfd3;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .Fondo {
+    position: absolute;
+    width: 1867px;
+    height: 719px;
+    left: -283px;
+    top: 648px;
+  }
+  
+  .Ellipse1 {
+    width: 628px;
+    height: 628px;
+    left: 1239px;
+    top: 0px;
+    position: absolute;
+    background: #ebc5cb;
+    box-shadow: 300px 300px 300px;
+    border-radius: 9999px;
+    filter: blur(300px);
+  }
+  
+  .Ellipse2 {
+    width: 958px;
+    height: 549px;
+    left: 0px;
+    top: 170px;
+    position: absolute;
+    background: #d24536;
+    box-shadow: 600px 600px 600px;
+    border-radius: 9999px;
+    filter: blur(600px);
+  }
+  
+  .Dog {
+    position: relative;
+    width: 100%;
+  }
+  
+  .DogBackgroundRed {
+    position: absolute;
+    background: linear-gradient(180deg, #d24536 0%, #92352b 100%);
+    border-radius: 9999px;
+  }
+  
+  .DogBackgroundRed:nth-child(1) {
+    width: 89.72px;
+    height: 89.72px;
+    left: 85%;
+    top: 37%;
+    transform: rotate(-86.84deg);
+    transform-origin: 0 0;
+  }
+  
+  .DogBackgroundRed:nth-child(2) {
+    width: 643px;
+    height: 643px;
+    left: 10%;
+    top: 19%;
+  }
+  
+  .DogBackgroundRed:nth-child(3) {
+    width: 95.33px;
+    height: 95.33px;
+    left: 8%;
+    top: 38%;
+    transform: rotate(-86.84deg);
+    transform-origin: 0 0;
+  }
+  
+  .DogBackgroundRed:nth-child(4) {
+    width: 164.39px;
+    height: 164.39px;
+    left: 30%;
+    top: 75%;
+    transform: rotate(160.93deg);
+    transform-origin: 0 0;
+    background: linear-gradient(180deg, #d24536 0%, #bb4032 100%);
+  }
+  
+  .DogBackgroundRed:nth-child(5) {
+    width: 44.01px;
+    height: 44.01px;
+    left: 76%;
+    top: 21%;
+    transform: rotate(-86.84deg);
+    transform-origin: 0 0;
+  }
+  
+  .DogImage {
+    position: relative;
+    max-width: 60%;
+    height: auto;
+    z-index: -1;
+    margin-bottom: -24px;
+  }
+  
+  .PWsitivity {
+    background: #d24536;
+    color: #efcfd3;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  .HeaderSedes, .HeaderServicios, .HeaderArticulos {
+    background: #d24536;
+    color: #efcfd3;
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px;
+  }
+  
+  .Sedes, .Servicios, .Articulos {
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    line-height: 30.32px;
+    letter-spacing: 2.88px;
+  }
+  
+  .Centro {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .UnNuevoNivelDePositividad {
+    color: #ba3f32;
+    font-size: 3rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .DescubreNuestrosPlanesHazDeTuMascotaLaMSFelizConPawsitivity {
+    color: #ba3f32;
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  
+  .Botones{
+    align-items: start;
+  }
+  
+  .BotonPaquetes {
+    background-color: #d24536;
+    border: none;
+    padding: 10px 20px;
+    color: #efcfd3;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .BotonPaquetes:hover {
+    background-color: #efcfd3;
+    border: none;
+    padding: 10px 20px;
+    color: #d24536;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .BotonSede {
+    border: 2px solid #d24536;
+    padding: 10px 20px;
+    color: #d24536;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .BotonSede:hover {
+    border: 2px solid #d24536;
+    padding: 10px 20px;
+    color: #d24536;
+    background-color: #efcfd3;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  
+  .Footer {
+    background-color: #ebc5cb;
+    color: #ba3f32;
+  }
+  
+  .Contacto, .Desarollo, .RedesSociales, .Telefonos, .ProyectoDesarrolladoParaLaMateriaIsis2603UniversidadDeLosAndesColombia2024, .SGuenosParaDescuentosExclusivos {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .LogoFooter .PWsitivity {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d24536;
+    display: inline-block;
+  }
+  
+  /* Cambiar color de fondo y color del texto seleccionado */
+::selection {
+    background-color: #efcfd3; /* Color de fondo del texto seleccionado */
+    color: #000000; /* Color del texto seleccionado */
+  }
+  
+  /* Cambiar color de fondo y color del texto seleccionado para navegadores WebKit (Chrome, Safari) */
+  ::-webkit-selection {
+    background-color: #efcfd3; /* Color de fondo del texto seleccionado */
+    color: #000000; /* Color del texto seleccionado */
+  }
+  
+  /* Cambiar color de fondo y color del texto seleccionado para navegadores Mozilla (Firefox) */
+  ::-moz-selection {
+    background-color: #efcfd3; /* Color de fondo del texto seleccionado */
+    color: #000000; /* Color del texto seleccionado */
+  }
+
+/* ELIPSES */
+
+  .Ellipse-Large {
+    width: 200px;
+    height: 200px;
+    top: 100%; /* Ajustar la posición para que quede al nivel del footer */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2; /* Asegura que el círculo grande esté por debajo del footer */
+  }
+  
+  .Ellipse-Small-1, .Ellipse-Small-2, .Ellipse-Small-3, .Ellipse-Small-4 {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .Ellipse-Small-1 {
+    top: 10%;
+    left: 10%;
+  }
+  
+  .Ellipse-Small-2 {
+    top: 10%;
+    left: 90%;
+  }
+  
+  .Ellipse-Small-3 {
+    top: 90%;
+    left: 10%;
+  }
+  
+  .Ellipse-Small-4 {
+    top: 90%;
+    left: 90%;
+  }
+
+  .DogBackgroundRed {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #E36D5B;
+    z-index: -1; /* Asegura que el círculo esté por debajo de otros elementos */
+  }
+
+  .PWsitivityFooter {
+    background: #efcfd3;
+    color: #d24536;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+  }

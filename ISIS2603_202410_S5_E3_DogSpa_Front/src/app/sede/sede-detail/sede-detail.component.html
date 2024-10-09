@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="square-container">
+    <p class="titleGrande">{{ sedeDetail.nombre }}</p>
+    <div class="row">
+      <div class="col-6">
+        <div class="thumb text-center">
+          <img class="sedeImage mx-auto" src="assets/images/sede2.png" alt="{{ sedeDetail.nombre }}" />
+        </div>
+      </div>
+      <div class="col-6">
+        <dl>
+          <dt class="subtitulo">Ciudad</dt>
+          <dd>{{ sedeDetail.ciudad }}</dd>
+          <hr />
+          <dt class="subtitulo">Artículos disponibles</dt>
+          <dd class="caption" *ngFor="let articulo of sedeDetail.articulos">
+            <a routerLink="/articulos/list"><b>{{ articulo.nombre }}</b></a>
+           
+          </dd>
+          <button class="btn-custom" routerLink="/articulos/list">Más información</button>
+        
+          <hr />
+          <dt class="subtitulo">Dirección</dt>
+          <dd>{{ sedeDetail.direccion }}</dd>
+          <hr />
+          <dt class="subtitulo">Instagram</dt>
+          <dd>{{ sedeDetail.instagram }}</dd>
+          <hr />
+          <dt class="subtitulo">Teléfono</dt>
+          <dd>{{ sedeDetail.telefono }}</dd>
+          <hr />
+          <div class="btn-container">
+            <button class="btn-custom" routerLink="/servicios/list">Servicios</button>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+

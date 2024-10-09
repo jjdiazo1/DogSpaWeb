@@ -1,0 +1,57 @@
+<br>
+<div class="page-container">
+  <h1 class="main-title">Paquetes</h1>
+
+<div class="filter-search-wrapper">
+  <div class="filter-search-container">
+    <div class="filter">
+      <select class="uniform-select" [(ngModel)]="selectedN" (change)="searchPaquetes()">
+        <option value="">Todos los Paquetes</option>
+        <option *ngFor="let paquete of paquetes" [value]="paquete.nombre">{{ paquete.nombre }}</option>
+      </select>
+    </div>
+    <div class="filter"></div>
+      <select class="uniform-select" [(ngModel)]="selectedSede" (ngModelChange)="getFiltro()">
+        <option value=0> Seleccionar Sede</option>
+        <option *ngFor="let sede of sedes" [value]="sede.id">{{ sede.nombre }}</option>
+      </select>
+    </div>
+
+  </div>
+
+
+<br>
+
+<div *ngIf="selected">
+  
+  <app-paqueteServicio-detail [paqueteServicioDetail]="selectedPaquete"></app-paqueteServicio-detail>
+  <button class="btn btn-primary mt-3" (click)="Atras()">✖</button>
+
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let paquete of filteredPaquetes">
+      <div class="card p-2" style="width: 15rem; height: 33rem">
+        <img
+          class="card-img-top"
+          src="../../../assets/images/DogSpa.png"
+          alt="{{ paquete.nombre }}"
+          
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ paquete.nombre }}</h5>
+          <p class="card-text precio">{{ paquete.precio | currency:'COP':'symbol' }}</p>
+          <button class="btn-custom" (click)="onSelected(paquete)">Más Información</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
