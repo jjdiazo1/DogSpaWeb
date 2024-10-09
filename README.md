@@ -1,7 +1,7 @@
 # DogSpa 
 Este proyecto fue desarrollado como parte de la materia **Uniandes-ISIS2603** desarrollo de software en equipos para la compañia ficticia Pawsitivity, un Spa de perros. El repositorio contiene dos aplicaciones: una para el backend desarrollada en Java Spring y otra para el frontend desarrollada en Angular.  El repositorio original del [backend](https://github.com/Uniandes-ISIS2603-backup/ISIS2603_202410_S5_E3_DogSpa_Back) y [frontend](https://github.com/Uniandes-ISIS2603-backup/ISIS2603_202410_S5_E3_DogSpa_Front) se encuentran en la organizacion [Uniandes ISIS2603 Backup](https://github.com/Uniandes-ISIS2603-backup)
 
-<img width="524" alt="Screenshot 2024-10-08 at 8 58 02 PM" src="https://github.com/user-attachments/assets/0ca7302a-5ad1-4714-b2e1-f479469b3ccf">
+<img width="700" alt="Screenshot 2024-10-08 at 8 58 02 PM" src="https://github.com/user-attachments/assets/0ca7302a-5ad1-4714-b2e1-f479469b3ccf">
 
 ## Creditos
 Se desarrollo en conjunto con el equipo Pawsitivity:
